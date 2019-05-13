@@ -1,0 +1,32 @@
+<div *ngIf="control.errors && control.touched">
+  <small class="form-text" *ngIf="control.errors['required']">
+    Esse campo é obrigatório.
+  </small>
+  <small class="form-text" *ngIf="control.errors['email']">
+    O e-mail está em um formato inválido.
+  </small>
+  <small class="form-text" *ngIf="control.errors['cnpj']">
+    O CNPJ está em um formato inválido.
+  </small>
+  <small class="form-text" *ngIf="control.errors['cpf']">
+    O CPF está em um formato inválido.
+  </small>
+  <small class="form-text" *ngIf="control.errors['min']">
+    O valor não pode ser menor que {{ control.errors['min'].min }}.
+  </small>
+  <small class="form-text" *ngIf="control.errors['max']">
+    O valor não pode ser maior que {{ control.errors['max'].max }}.
+  </small>
+  <small class="form-text" *ngIf="control.errors['minlength']">
+    O valor precisa ter no mínimo {{ control.errors['minlength'].requiredLength }} dígitos.
+  </small>
+  <small class="form-text" *ngIf="control.errors['maxlength']">
+    O valor precisa ter no máximo {{ control.errors['maxlength'].requiredLength }} dígitos.
+  </small>
+  <small class="form-text" *ngIf="control.errors['minDate']">
+    A data não pode ser menor que {{ control.errors['minDate'] | date:'dd/MM/yyyy' }}
+  </small>
+  <small class="form-text" *ngIf="control.errors['maxDate']">
+    A data não pode ser maior que {{ control.errors['minDate']|date:'dd/MM/yyyy' }}.
+  </small>
+</div>

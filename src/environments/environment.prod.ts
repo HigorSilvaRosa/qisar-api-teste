@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: "https://qisarapi.azurewebsites.net/api/",
 };
